@@ -33,6 +33,10 @@ output "s3_bucket_id" {
   value = "${aws_s3_bucket.terraform_state.id}"
 }
 
+output "s3_bucket_region" {
+  value = "${aws_s3_bucket.terraform_state.region}"
+}
+
 #data "terraform_remote_state" "foo" {
 #  backend = "s3"
 #
