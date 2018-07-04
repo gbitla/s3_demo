@@ -13,3 +13,11 @@ resource "aws_s3_bucket" "terraform_state" {
     prevent_destroy = true
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "gb1-terraform-up-and-running-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
+}
