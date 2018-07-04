@@ -17,10 +17,11 @@ resource "aws_s3_bucket" "terraform_state" {
 #reference - http://2ndwatch.com/blog/migratingterraformremoate/
 terraform {
   backend "s3" {
-    bucket  = "gb1-terraform-up-and-running-state"
-    key     = "terraform.tfstate"
-    region  = "us-east-1"
-    encrypt = true
+    bucket         = "gb1-terraform-up-and-running-state"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-lock"
   }
 }
 
