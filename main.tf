@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform_dl_s3_demo"
+  bucket = "gb1-terraform-up-and-running-state"
 
   versioning {
     enabled = true
